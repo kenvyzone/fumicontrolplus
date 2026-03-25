@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>FumiControl+ | Fumigación Profesional en CDMX y Estado de México</title>
+  <meta name="description" content="Fumigación profesional en CDMX y Estado de México con más de 35 años de experiencia. Técnicos certificados, atención el mismo día, resultados garantizados. Llama: 55 1367 2223."/>
+  <meta name="keywords" content="fumigación CDMX, control de plagas Ciudad de México, fumigación Estado de México, desratización, sanitización, fumigación profesional, empresa familiar fumigación, plagas urbanas"/>
+  <meta property="og:title" content="FumiControl+ | Fumigación Profesional CDMX y EdoMex"/>
+  <meta property="og:description" content="35 años de experiencia eliminando plagas. Técnicos certificados, atención inmediata, resultados garantizados."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.fumicontrolplus.com"/>
+  <link rel="canonical" href="https://www.fumicontrolplus.com"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"FumiControl+","description":"Empresa familiar con más de 35 años de experiencia en fumigación, control de plagas y sanitización en CDMX y Estado de México.","url":"https://www.fumicontrolplus.com","telephone":"+525513672223","email":"contacto@fumicontrolplus.com","foundingDate":"1990","address":{"@type":"PostalAddress","addressLocality":"Ciudad de México","addressRegion":"CDMX","addressCountry":"MX"},"areaServed":["Ciudad de México","Estado de México"],"serviceType":["Fumigación","Control de plagas","Desratización","Sanitización","Control Preventivo"],"priceRange":"$$"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --verde-principal:#274B21;
+      --verde-oliva:#96AC22;
+      --crema:#F5F3DE;
+      --amarillo:#F9BA30;
+      --verde-oscuro:#1C3120;
+      --amarillo-vivo:#FED42F;
+      --blanco:#ffffff;
+      --texto-dark:#111111;
+      --texto-mid:#3a3a3a;
+      --texto-muted:#6b6b6b;
+      --border-light:rgba(39,75,33,0.1);
+      --glass-light:rgba(255,255,255,0.13);
+      --glass-border:rgba(255,255,255,0.22);
+      --glass-dark:rgba(28,49,32,0.55);
+      --r-sm:12px;--r-md:20px;--r-lg:32px;--r-xl:48px;
+      --font:'Montserrat',sans-serif;
+      --ease:cubic-bezier(.4,0,.2,1);
+      --t:all .3s var(--ease);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font);color:var(--texto-dark);background:var(--crema);overflow-x:hidden}
+
+    /* ──────── LOGO SVG ──────── */
+    .logo-svg{width:38px;height:38px;flex-shrink:0}
+
+    /* ──────── NAVBAR ──────── */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      height:68px;display:flex;align-items:center;justify-content:space-between;
+      padding:0 clamp(1.25rem,5vw,3.5rem);
+      background:rgba(28,49,32,0.75);
+      backdrop-filter:blur(18px) saturate(1.4);
+      -webkit-backdrop-filter:blur(18px) saturate(1.4);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      transition:var(--t)
+    }
+    .nav.solid{background:rgba(20,38,22,0.97);height:60px}
+    .nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none;cursor:pointer}
+    .nav-logo-wordmark{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;color:var(--blanco)}
+    .nav-logo-wordmark em{color:var(--amarillo-vivo);font-style:normal}
+    .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+    .nav-links a{font-size:.8rem;font-weight:600;letter-spacing:.05em;color:rgba(255,255,255,.8);text-decoration:none;text-transform:uppercase;position:relative;padding-bottom:4px;transition:var(--t)}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--amarillo);border-radius:2px;transition:width .28s var(--ease)}
+    .nav-links a:hover,.nav-links a.active{color:var(--blanco)}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+    .nav-cta{background:var(--amarillo)!important;color:var(--verde-oscuro)!important;padding:8px 20px!important;border-radius:50px!important;font-weight:800!important;transition:var(--t)!important}
+    .nav-cta::after{display:none!important}
+    .nav-cta:hover{background:var(--amarillo-vivo)!important;transform:translateY(-2px);box-shadow:0 6px 20px rgba(249,186,48,.4)!important}
+    .nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+    .nav-ham span{display:block;width:24px;height:2px;background:var(--blanco);border-radius:2px;transition:var(--t)}
+    .nav-ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-ham.open span:nth-child(2){opacity:0}
+    .nav-ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;z-index:999;background:rgba(20,38,22,.98);backdrop-filter:blur(20px);padding:1.5rem clamp(1.25rem,5vw,3.5rem) 2rem;border-bottom:1px solid rgba(255,255,255,.08);flex-direction:column;gap:1.25rem}
+    .nav-mobile.open{display:flex}
+    .nav-mobile a{font-size:.9rem;font-weight:600;color:rgba(255,255,255,.85);text-decoration:none;text-transform:uppercase;letter-spacing:.05em;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.06);transition:var(--t)}
+    .nav-mobile a:hover{color:var(--amarillo)}
+    .nav-mobile .m-cta{background:var(--amarillo);color:var(--verde-oscuro)!important;text-align:center;border-radius:50px;padding:.75rem!important;border:none!important;margin-top:.5rem;font-weight:800!important}
+
+    /* ──────── PAGE SYSTEM ──────── */
+    .page{display:none}
+    .page.active{display:block}
+
+    /* ──────── KEYFRAMES ──────── */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+    @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(24px,-28px) scale(1.06)}}
+    @keyframes revIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+    /* ──────── UTILS ──────── */
+    .wrap{max-width:1240px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem)}
+    .sec{padding:clamp(4.5rem,8vw,7rem) 0}
+    .sec-white{background:var(--blanco)}
+    .sec-crema{background:var(--crema)}
+    .sec-dark{background:var(--verde-principal)}
+    .sec-darkest{background:var(--verde-oscuro)}
+
+    .sec-head{text-align:center;margin-bottom:clamp(2.5rem,5vw,4rem)}
+    .sec-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 16px;border-radius:50px;margin-bottom:1rem}
+    .tag-green{background:rgba(39,75,33,.09);color:var(--verde-principal);border:1px solid rgba(39,75,33,.15)}
+    .tag-yellow{background:rgba(249,186,48,.15);color:#6b4900;border:1px solid rgba(249,186,48,.3)}
+    .tag-light{background:rgba(255,255,255,.12);color:var(--amarillo);border:1px solid rgba(255,255,255,.18)}
+    .sec-title{font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:900;letter-spacing:-.035em;line-height:1.12;margin-bottom:.9rem}
+    .sec-title-dark{color:var(--texto-dark)}
+    .sec-title-white{color:var(--blanco)}
+    .sec-sub{font-size:.95rem;font-weight:400;line-height:1.75;max-width:560px;margin:0 auto}
+    .sec-sub-dark{color:var(--texto-muted)}
+    .sec-sub-white{color:rgba(255,255,255,.62)}
+
+    .btn-yellow{display:inline-flex;align-items:center;gap:10px;background:var(--amarillo);color:var(--verde-oscuro);font-family:var(--font);font-weight:800;font-size:.9rem;padding:14px 28px;border-radius:50px;text-decoration:none;transition:var(--t);box-shadow:0 4px 22px rgba(249,186,48,.3);letter-spacing:.01em;border:none;cursor:pointer}
+    .btn-yellow:hover{background:var(--amarillo-vivo);transform:translateY(-3px);box-shadow:0 10px 32px rgba(249,186,48,.5)}
+    .btn-yellow svg{width:18px;height:18px;flex-shrink:0}
+    .btn-outline-dark{display:inline-flex;align-items:center;gap:10px;background:transparent;border:2px solid var(--verde-principal);color:var(--verde-principal);font-family:var(--font);font-weight:700;font-size:.9rem;padding:13px 26px;border-radius:50px;text-decoration:none;transition:var(--t);cursor:pointer}
+    .btn-outline-dark:hover{background:var(--verde-principal);color:var(--blanco);transform:translateY(-2px)}
+    .btn-outline-white{display:inline-flex;align-items:center;gap:10px;background:transparent;border:1.5px solid rgba(255,255,255,.3);color:var(--blanco);font-family:var(--font);font-weight:600;font-size:.9rem;padding:13px 26px;border-radius:50px;text-decoration:none;transition:var(--t);cursor:pointer;backdrop-filter:blur(8px)}
+    .btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6);transform:translateY(-2px)}
+
+    /* ──────── HERO ──────── */
+    .hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--verde-oscuro);overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background:linear-gradient(120deg,#0e1f12 0%,#1c3120 45%,#274b21 100%)}
+    .orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.28;pointer-events:none;animation:orbFloat 10s ease-in-out infinite}
+    .orb-1{width:560px;height:560px;background:radial-gradient(circle,rgba(249,186,48,.55),transparent 70%);top:-120px;left:-100px}
+    .orb-2{width:420px;height:420px;background:radial-gradient(circle,rgba(150,172,34,.5),transparent 70%);bottom:-80px;right:10%;animation-delay:-5s}
+    .hero-grad{position:absolute;inset:0;z-index:2;background:linear-gradient(105deg,rgba(14,31,18,.95) 0%,rgba(28,49,32,.82) 45%,rgba(28,49,32,.15) 100%)}
+    .hero-wrap{position:relative;z-index:10;width:100%;max-width:1240px;margin:0 auto;padding:clamp(7rem,12vh,9rem) clamp(1.25rem,5vw,3.5rem) clamp(4rem,8vh,6rem);display:grid;grid-template-columns:1fr 400px;gap:3rem;align-items:center}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(12px);border-radius:50px;padding:7px 18px;margin-bottom:1.5rem;font-size:.72rem;font-weight:700;color:var(--amarillo);letter-spacing:.08em;text-transform:uppercase;animation:fadeUp .5s ease both}
+    .eyebrow-dot{width:7px;height:7px;background:var(--amarillo);border-radius:50%;animation:blink 2s ease infinite}
+    .hero-h1{font-size:clamp(2rem,4.2vw,3.5rem);font-weight:900;color:var(--blanco);line-height:1.08;letter-spacing:-.03em;margin-bottom:1.3rem;animation:fadeUp .5s .08s ease both}
+    .hero-h1 .acc{color:var(--amarillo)}
+    .hero-sub{font-size:clamp(.9rem,1.2vw,1.05rem);font-weight:400;color:rgba(255,255,255,.72);line-height:1.75;max-width:500px;margin-bottom:2.5rem;animation:fadeUp .5s .16s ease both}
+    .hero-btns{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:3rem;animation:fadeUp .5s .24s ease both}
+    .hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;animation:fadeUp .5s .32s ease both}
+    .hstat-num{font-size:1.7rem;font-weight:900;color:var(--amarillo);letter-spacing:-.03em;line-height:1}
+    .hstat-lbl{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.5);margin-top:4px;letter-spacing:.04em;text-transform:uppercase}
+
+    /* Hero card */
+    .hero-card{background:rgba(28,49,32,.6);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.12);animation:fadeUp .5s .2s ease both}
+    .hcard-header{background:var(--amarillo);padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+    .hcard-header-title{font-size:.9rem;font-weight:800;color:var(--verde-oscuro)}
+    .hcard-header-badge{font-size:.68rem;font-weight:700;background:var(--verde-oscuro);color:var(--amarillo);padding:3px 10px;border-radius:50px}
+    .hcard-body{padding:1.5rem}
+    .hcard-service{display:flex;align-items:center;gap:12px;padding:.85rem 1rem;border-radius:var(--r-sm);border:1px solid rgba(255,255,255,.1);margin-bottom:.65rem;background:rgba(255,255,255,.06);transition:var(--t)}
+    .hcard-service:hover{background:rgba(255,255,255,.12);border-color:rgba(249,186,48,.25)}
+    .hcard-service-icon{width:34px;height:34px;background:rgba(249,186,48,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    .hcard-service-name{font-size:.83rem;font-weight:700;color:var(--blanco)}
+    .hcard-service-tag{font-size:.65rem;color:rgba(255,255,255,.5);margin-top:2px}
+    .hcard-cta{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--amarillo);color:var(--verde-oscuro);font-weight:800;font-size:.88rem;padding:13px;border-radius:var(--r-sm);text-decoration:none;transition:var(--t);margin-top:1rem}
+    .hcard-cta:hover{background:var(--amarillo-vivo)}
+    .hcard-cta svg{width:16px;height:16px}
+
+    /* ──────── TRUST BAR ──────── */
+    .trust-bar{background:var(--verde-oscuro);border-top:1px solid rgba(255,255,255,.07);padding:1.2rem 0}
+    .trust-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:clamp(1.5rem,4vw,3.5rem)}
+    .trust-item{display:flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.7);letter-spacing:.02em}
+    .trust-item svg{width:16px;height:16px;color:var(--amarillo);flex-shrink:0}
+
+    /* ──────── SERVICIOS CARDS ──────── */
+    .srv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    .srv-card{background:var(--blanco);border-radius:var(--r-md);border:1px solid var(--border-light);overflow:hidden;transition:var(--t)}
+    .srv-card:hover{transform:translateY(-7px);box-shadow:0 22px 55px rgba(39,75,33,.13);border-color:rgba(39,75,33,.2)}
+    .srv-img{height:175px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden}
+    .srv-img-green{background:linear-gradient(135deg,#1c3120,#274b21)}
+    .srv-img-yellow{background:linear-gradient(135deg,#6b4900,#c47700)}
+    .srv-img-olive{background:linear-gradient(135deg,#3d5c00,#96ac22)}
+    .srv-img-dark{background:linear-gradient(135deg,#0e1f12,#1c3120)}
+    .srv-badge{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.35);color:var(--amarillo);font-size:.6rem;font-weight:700;padding:3px 10px;border-radius:50px;letter-spacing:.05em;text-transform:uppercase;backdrop-filter:blur(6px)}
+    .srv-body{padding:1.4rem}
+    .srv-title{font-size:.95rem;font-weight:800;color:var(--texto-dark);margin-bottom:.5rem;letter-spacing:-.01em}
+    .srv-desc{font-size:.8rem;color:var(--texto-muted);line-height:1.65;margin-bottom:1.1rem}
+    .srv-link{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--verde-principal);text-decoration:none;transition:var(--t)}
+    .srv-link svg{width:14px;height:14px;transition:transform .25s}
+    .srv-link:hover{color:var(--verde-oliva)}
+    .srv-link:hover svg{transform:translateX(4px)}
+
+    /* ──────── PROCESO ──────── */
+    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;position:relative}
+    .proc-grid::before{content:'';position:absolute;top:35px;left:12%;width:76%;height:1px;background:linear-gradient(90deg,transparent,rgba(249,186,48,.3) 20%,rgba(249,186,48,.3) 80%,transparent)}
+    .proc-step{background:rgba(28,49,32,.7);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(16px);border-radius:var(--r-md);padding:2rem 1.5rem;text-align:center;position:relative;z-index:1;transition:var(--t)}
+    .proc-step:hover{border-color:rgba(249,186,48,.3);transform:translateY(-5px)}
+    .proc-num{width:56px;height:56px;background:var(--amarillo);color:var(--verde-oscuro);font-size:1.25rem;font-weight:900;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;box-shadow:0 0 0 8px rgba(249,186,48,.15)}
+    .proc-title{font-size:.9rem;font-weight:800;color:var(--blanco);margin-bottom:.5rem}
+    .proc-desc{font-size:.79rem;color:rgba(255,255,255,.56);line-height:1.65}
+
+    /* ──────── CERT / SPLIT LAYOUT ──────── */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .split-rev{grid-template-columns:1fr 1fr}
+    .cert-title{font-size:clamp(1.5rem,2.6vw,2.2rem);font-weight:900;color:var(--texto-dark);letter-spacing:-.03em;line-height:1.15;margin-bottom:1rem}
+    .cert-sub{font-size:.9rem;color:var(--texto-muted);line-height:1.75;margin-bottom:2rem}
+    .cert-pts{list-style:none;display:flex;flex-direction:column;gap:1rem}
+    .cert-pt{display:flex;align-items:flex-start;gap:14px}
+    .cert-icon{width:38px;height:38px;flex-shrink:0;background:rgba(39,75,33,.08);border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .cert-icon svg{width:18px;height:18px;color:var(--verde-principal)}
+    .cert-pt strong{display:block;font-size:.88rem;font-weight:700;color:var(--texto-dark);margin-bottom:2px}
+    .cert-pt span{font-size:.79rem;color:var(--texto-muted);line-height:1.55}
+    .cert-visual{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border-light);box-shadow:0 14px 45px rgba(0,0,0,.08)}
+    .cert-img-block{height:280px;background:linear-gradient(135deg,#1c3120,#274b21);display:flex;align-items:center;justify-content:center;font-size:5rem}
+    .cert-nums{display:flex}
+    .cert-num-item{flex:1;text-align:center;padding:1.2rem;border-right:1px solid var(--border-light);background:var(--blanco)}
+    .cert-num-item:last-child{border:none}
+    .cert-n{font-size:1.6rem;font-weight:900;color:var(--verde-principal);letter-spacing:-.03em}
+    .cert-l{font-size:.7rem;font-weight:600;color:var(--texto-muted);margin-top:3px;letter-spacing:.03em;text-transform:uppercase}
+
+    /* ──────── COBERTURA ──────── */
+    .cov-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem}
+    .cov-card{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border-light)}
+    .cov-head{padding:1.1rem 1.4rem;display:flex;align-items:center;gap:11px}
+    .cov-head svg{width:20px;height:20px;flex-shrink:0}
+    .cov-head-title{font-size:.9rem;font-weight:800}
+    .cov-card-verde .cov-head{background:var(--verde-principal);color:var(--blanco)}
+    .cov-card-yellow .cov-head{background:var(--amarillo);color:var(--verde-oscuro)}
+    .cov-tags{padding:1.1rem 1.4rem;display:flex;flex-wrap:wrap;gap:7px;background:rgba(0,0,0,.015)}
+    .cov-tag{font-size:.72rem;font-weight:600;padding:4px 11px;border-radius:50px;border:1px solid rgba(39,75,33,.12);background:rgba(39,75,33,.06);color:var(--verde-principal)}
+    .cov-card-yellow .cov-tag{background:rgba(249,186,48,.1);color:#6b4900;border-color:rgba(249,186,48,.25)}
+    .cov-note{text-align:center;font-size:.85rem;font-weight:500;color:var(--texto-muted);margin-top:1.25rem}
+
+    /* ──────── FAQ ──────── */
+    .faq-list{display:flex;flex-direction:column;gap:10px;max-width:780px;margin:0 auto}
+    .faq-item{background:var(--blanco);border-radius:var(--r-md);border:1px solid var(--border-light);overflow:hidden;transition:var(--t)}
+    .faq-item.open{border-color:rgba(39,75,33,.22);box-shadow:0 6px 24px rgba(39,75,33,.07)}
+    .faq-q{padding:1.2rem 1.4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;user-select:none}
+    .faq-q-txt{font-size:.9rem;font-weight:700;color:var(--texto-dark)}
+    .faq-ico{width:30px;height:30px;flex-shrink:0;background:rgba(39,75,33,.07);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--t)}
+    .faq-item.open .faq-ico{background:var(--verde-principal);transform:rotate(45deg)}
+    .faq-ico svg{width:13px;height:13px;color:var(--verde-principal)}
+    .faq-item.open .faq-ico svg{color:var(--blanco)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s ease;padding:0 1.4rem}
+    .faq-item.open .faq-a{max-height:250px;padding:0 1.4rem 1.2rem}
+    .faq-a p{font-size:.87rem;color:var(--texto-muted);line-height:1.72}
+
+    /* ──────── REVIEWS ──────── */
+    .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .rev-card{background:var(--blanco);border-radius:var(--r-md);padding:1.75rem;border:1px solid var(--border-light);position:relative;transition:var(--t)}
+    .rev-card:hover{transform:translateY(-5px);box-shadow:0 14px 38px rgba(0,0,0,.07)}
+    .rev-card::before{content:'"';position:absolute;top:.75rem;right:1.25rem;font-size:4.5rem;color:var(--amarillo);font-family:Georgia,serif;line-height:1;opacity:.4}
+    .rev-stars{display:flex;gap:3px;margin-bottom:1rem}
+    .rev-stars svg{width:15px;height:15px;color:var(--amarillo-vivo)}
+    .rev-txt{font-size:.87rem;color:var(--texto-mid);line-height:1.72;margin-bottom:1.2rem;font-style:italic}
+    .rev-author{display:flex;align-items:center;gap:11px}
+    .rev-av{width:38px;height:38px;background:var(--verde-principal);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--amarillo);font-weight:800;font-size:.85rem;flex-shrink:0}
+    .rev-name{font-size:.85rem;font-weight:700;color:var(--texto-dark)}
+    .rev-loc{font-size:.73rem;color:var(--texto-muted)}
+
+    /* ──────── CTA BANNER ──────── */
+    .cta-sec{background:var(--amarillo);padding:clamp(4rem,7vw,6rem) 0;position:relative;overflow:hidden}
+    .cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 90% at 85% 50%,rgba(255,255,255,.18),transparent);pointer-events:none}
+    .cta-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+    .cta-title{font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:900;color:var(--verde-oscuro);letter-spacing:-.035em;line-height:1.12;margin-bottom:.7rem}
+    .cta-sub{font-size:.95rem;color:rgba(28,49,32,.72);line-height:1.65;max-width:440px}
+    .cta-actions{display:flex;flex-direction:column;gap:.9rem;align-items:flex-start;flex-shrink:0}
+    .btn-dark{display:inline-flex;align-items:center;gap:10px;background:var(--verde-oscuro);color:var(--blanco);font-family:var(--font);font-weight:800;font-size:.9rem;padding:14px 28px;border-radius:50px;text-decoration:none;transition:var(--t);white-space:nowrap;border:none;cursor:pointer}
+    .btn-dark:hover{background:var(--verde-principal);transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.25)}
+    .btn-dark svg{width:18px;height:18px;flex-shrink:0}
+    .cta-tel{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .cta-tel-ico{width:40px;height:40px;background:rgba(28,49,32,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .cta-tel-ico svg{width:18px;height:18px;color:var(--verde-oscuro)}
+    .cta-tel-lbl{font-size:.72rem;font-weight:600;color:rgba(28,49,32,.6);letter-spacing:.04em;text-transform:uppercase}
+    .cta-tel-num{font-size:1rem;font-weight:800;color:var(--verde-oscuro);letter-spacing:-.01em}
+
+    /* ──────── FOOTER ──────── */
+    footer{background:var(--verde-oscuro);padding:clamp(3rem,6vw,5rem) 0 0}
+    .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:3rem;margin-bottom:2.5rem}
+    .foot-brand{font-size:1.3rem;font-weight:900;color:var(--blanco);letter-spacing:-.02em;margin-bottom:.75rem}
+    .foot-brand em{color:var(--amarillo-vivo);font-style:normal}
+    .foot-desc{font-size:.82rem;color:rgba(255,255,255,.52);line-height:1.72;margin-bottom:1.25rem;max-width:260px}
+    .foot-contact{display:flex;align-items:center;gap:9px;font-size:.82rem;color:rgba(255,255,255,.65);margin-bottom:.6rem}
+    .foot-contact svg{width:15px;height:15px;flex-shrink:0;color:var(--amarillo)}
+    .foot-contact a{color:rgba(255,255,255,.65);text-decoration:none;transition:var(--t)}
+    .foot-contact a:hover{color:var(--amarillo)}
+    .foot-col-title{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
+    .foot-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .foot-links a{font-size:.83rem;color:rgba(255,255,255,.55);text-decoration:none;transition:var(--t);font-weight:500}
+    .foot-links a:hover{color:var(--amarillo)}
+    .foot-cta-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-md);padding:1.5rem}
+    .foot-cta-title{font-size:.9rem;font-weight:800;color:var(--blanco);margin-bottom:.5rem}
+    .foot-cta-desc{font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.65;margin-bottom:1.2rem}
+    .foot-cta-btn{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--amarillo);color:var(--verde-oscuro);font-weight:800;font-size:.85rem;padding:12px;border-radius:var(--r-sm);text-decoration:none;transition:var(--t)}
+    .foot-cta-btn:hover{background:var(--amarillo-vivo)}
+    .foot-cta-btn svg{width:16px;height:16px}
+    .foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding:1.5rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .foot-copy{font-size:.78rem;color:rgba(255,255,255,.3);font-weight:500}
+    .foot-legal{display:flex;gap:1.5rem}
+    .foot-legal a{font-size:.78rem;color:rgba(255,255,255,.3);text-decoration:none;transition:var(--t)}
+    .foot-legal a:hover{color:var(--amarillo)}
+
+    /* ──────── WA FLOTANTE ──────── */
+    .wa-wrap{position:fixed;bottom:24px;right:24px;z-index:900;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+    .wa-tip{background:rgba(28,49,32,.9);color:var(--blanco);font-size:.78rem;font-weight:700;padding:7px 14px;border-radius:50px;backdrop-filter:blur(10px);opacity:0;transform:translateX(10px);transition:var(--t);pointer-events:none;white-space:nowrap}
+    .wa-wrap:hover .wa-tip{opacity:1;transform:translateX(0)}
+    .wa-btn{width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,.4);transition:var(--t);text-decoration:none}
+    .wa-btn:hover{transform:scale(1.1);box-shadow:0 10px 32px rgba(37,211,102,.55)}
+    .wa-btn svg{width:28px;height:28px;fill:var(--blanco)}
+
+    /* ──────── SERVICIOS PAGE ──────── */
+    .page-hero{padding:clamp(6rem,10vw,8rem) 0 clamp(3rem,5vw,5rem);text-align:center;position:relative;overflow:hidden}
+    .page-hero-dark{background:linear-gradient(135deg,#0e1f12 0%,#1c3120 60%,#274b21 100%)}
+    .page-hero-yellow{background:linear-gradient(135deg,#c47700 0%,var(--amarillo) 100%)}
+    .page-hero .orb-1{top:-80px;left:-60px;opacity:.2}
+    .page-hero .orb-2{bottom:-60px;right:5%;opacity:.18;animation-delay:-3s}
+    .page-hero-tag{display:inline-block;background:rgba(255,255,255,.12);color:var(--amarillo);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 16px;border-radius:50px;border:1px solid rgba(255,255,255,.18);margin-bottom:1.2rem}
+    .page-hero-h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:var(--blanco);letter-spacing:-.035em;line-height:1.1;margin-bottom:1rem}
+    .page-hero-sub{font-size:1rem;color:rgba(255,255,255,.65);line-height:1.75;max-width:600px;margin:0 auto 2rem}
+
+    /* Servicios específicos grid */
+    .srv-esp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    .srv-esp-card{background:var(--blanco);border-radius:var(--r-md);border:1px solid var(--border-light);display:grid;grid-template-columns:200px 1fr;overflow:hidden;transition:var(--t)}
+    .srv-esp-card:hover{box-shadow:0 16px 45px rgba(39,75,33,.1);transform:translateY(-4px);border-color:rgba(39,75,33,.2)}
+    .srv-esp-img{display:flex;align-items:center;justify-content:center;font-size:3rem}
+    .srv-esp-img-green{background:linear-gradient(135deg,#1c3120,#274b21)}
+    .srv-esp-img-olive{background:linear-gradient(135deg,#3d5c00,#96ac22)}
+    .srv-esp-img-yellow{background:linear-gradient(135deg,#6b4900,#c47700)}
+    .srv-esp-img-dark{background:linear-gradient(135deg,#0e1f12,#1c3120)}
+    .srv-esp-body{padding:1.75rem}
+    .srv-esp-title{font-size:1.1rem;font-weight:800;color:var(--texto-dark);margin-bottom:.6rem;letter-spacing:-.02em}
+    .srv-esp-desc{font-size:.85rem;color:var(--texto-muted);line-height:1.7;margin-bottom:1rem}
+    .srv-esp-list{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.25rem}
+    .srv-esp-list li{font-size:.8rem;color:var(--texto-mid);display:flex;align-items:center;gap:8px}
+    .srv-esp-list li::before{content:'✓';color:var(--verde-oliva);font-weight:800;font-size:.75rem}
+
+    /* Razones grid */
+    .razones-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .razon-card{background:var(--blanco);border-radius:var(--r-md);padding:2rem;border:1px solid var(--border-light);text-align:center;transition:var(--t)}
+    .razon-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(39,75,33,.1)}
+    .razon-icon{width:60px;height:60px;background:rgba(39,75,33,.07);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:1.75rem}
+    .razon-title{font-size:.95rem;font-weight:800;color:var(--texto-dark);margin-bottom:.5rem}
+    .razon-desc{font-size:.82rem;color:var(--texto-muted);line-height:1.65}
+
+    /* ──────── PLAGAS PAGE ──────── */
+    .plaga-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .plaga-card{background:var(--blanco);border-radius:var(--r-md);border:1px solid var(--border-light);overflow:hidden;transition:var(--t)}
+    .plaga-card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(39,75,33,.1);border-color:rgba(39,75,33,.18)}
+    .plaga-img{height:150px;display:flex;align-items:center;justify-content:center;font-size:3.5rem}
+    .plaga-img-1{background:linear-gradient(135deg,#1c3120,#274b21)}
+    .plaga-img-2{background:linear-gradient(135deg,#3d2000,#6b4900)}
+    .plaga-img-3{background:linear-gradient(135deg,#3d5c00,#96ac22)}
+    .plaga-img-4{background:linear-gradient(135deg,#0e1f12,#1c3120)}
+    .plaga-img-5{background:linear-gradient(135deg,#4a2000,#8b4000)}
+    .plaga-img-6{background:linear-gradient(135deg,#5c0e00,#8b1a00)}
+    .plaga-img-7{background:linear-gradient(135deg,#1c1c3a,#2d2d5e)}
+    .plaga-img-8{background:linear-gradient(135deg,#2a1a00,#5c3800)}
+    .plaga-body{padding:1.4rem}
+    .plaga-name{font-size:.95rem;font-weight:800;color:var(--texto-dark);margin-bottom:.45rem}
+    .plaga-desc{font-size:.8rem;color:var(--texto-muted);line-height:1.65;margin-bottom:1rem}
+    .plaga-tag{display:inline-block;font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:50px;background:rgba(39,75,33,.07);color:var(--verde-principal);border:1px solid rgba(39,75,33,.12)}
+
+    /* Señales */
+    .senales-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    .senal-card{background:var(--blanco);border-radius:var(--r-md);padding:1.5rem;border:1px solid var(--border-light);text-align:center;transition:var(--t)}
+    .senal-card:hover{box-shadow:0 10px 30px rgba(39,75,33,.08)}
+    .senal-icon{font-size:2rem;margin-bottom:.75rem}
+    .senal-title{font-size:.88rem;font-weight:700;color:var(--texto-dark);margin-bottom:.4rem}
+    .senal-desc{font-size:.78rem;color:var(--texto-muted);line-height:1.6}
+
+    /* Espacios */
+    .espacios-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:2rem}
+    .espacio-pill{display:flex;align-items:center;gap:8px;background:var(--blanco);border:1px solid var(--border-light);border-radius:50px;padding:.6rem 1.25rem;font-size:.85rem;font-weight:600;color:var(--texto-dark);transition:var(--t)}
+    .espacio-pill:hover{background:var(--verde-principal);color:var(--blanco);border-color:var(--verde-principal)}
+
+    /* ──────── HISTORIA PAGE ──────── */
+    .historia-timeline{display:flex;flex-direction:column;gap:0;max-width:760px;margin:0 auto}
+    .timeline-item{display:grid;grid-template-columns:80px 1fr;gap:2rem;position:relative;padding-bottom:2.5rem}
+    .timeline-item::before{content:'';position:absolute;left:39px;top:40px;bottom:0;width:2px;background:linear-gradient(to bottom,var(--amarillo),rgba(249,186,48,.1))}
+    .timeline-item:last-child::before{display:none}
+    .tl-dot{width:40px;height:40px;background:var(--amarillo);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--verde-oscuro);font-weight:900;font-size:.7rem;flex-shrink:0;box-shadow:0 0 0 6px rgba(249,186,48,.15);z-index:1;position:relative}
+    .tl-content{background:var(--blanco);border-radius:var(--r-md);border:1px solid var(--border-light);padding:1.5rem;transition:var(--t)}
+    .tl-content:hover{border-color:rgba(39,75,33,.18);box-shadow:0 8px 28px rgba(39,75,33,.08)}
+    .tl-stage{font-size:.7rem;font-weight:700;color:var(--verde-oliva);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem}
+    .tl-title{font-size:.95rem;font-weight:800;color:var(--texto-dark);margin-bottom:.45rem}
+    .tl-desc{font-size:.83rem;color:var(--texto-muted);line-height:1.65}
+
+    /* Principios */
+    .principios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .principio-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-md);padding:1.75rem;transition:var(--t)}
+    .principio-card:hover{background:rgba(255,255,255,.1);border-color:rgba(249,186,48,.2)}
+    .principio-check{width:32px;height:32px;background:rgba(249,186,48,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+    .principio-check svg{width:16px;height:16px;color:var(--amarillo)}
+    .principio-title{font-size:.9rem;font-weight:800;color:var(--blanco);margin-bottom:.4rem}
+    .principio-desc{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6}
+
+    /* Stats fundador */
+    .fundador-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+    .fstat{background:rgba(249,186,48,.12);border:1px solid rgba(249,186,48,.2);border-radius:var(--r-md);padding:1.25rem;text-align:center}
+    .fstat-n{font-size:1.6rem;font-weight:900;color:var(--amarillo);letter-spacing:-.03em}
+    .fstat-l{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);margin-top:3px;text-transform:uppercase;letter-spacing:.04em}
+
+    /* ──────── CONTACTO PAGE ──────── */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+    .contact-method{display:flex;flex-direction:column;gap:1rem}
+    .cmethod-card{background:var(--blanco);border-radius:var(--r-md);border:1px solid var(--border-light);padding:1.75rem;display:flex;align-items:flex-start;gap:1.25rem;transition:var(--t)}
+    .cmethod-card:hover{border-color:rgba(39,75,33,.2);box-shadow:0 8px 28px rgba(39,75,33,.08)}
+    .cmethod-icon{width:48px;height:48px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .cmethod-icon-green{background:rgba(39,75,33,.08)}
+    .cmethod-icon-green svg{color:var(--verde-principal)}
+    .cmethod-icon-wa{background:#e8f8ef}
+    .cmethod-icon-wa svg{color:#25d366}
+    .cmethod-icon-mail{background:rgba(249,186,48,.1)}
+    .cmethod-icon-mail svg{color:var(--amarillo)}
+    .cmethod-icon svg{width:22px;height:22px}
+    .cmethod-label{font-size:.72rem;font-weight:700;color:var(--texto-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.3rem}
+    .cmethod-value{font-size:1rem;font-weight:800;color:var(--texto-dark);margin-bottom:.25rem}
+    .cmethod-desc{font-size:.8rem;color:var(--texto-muted);line-height:1.55}
+    .cmethod-btn{display:inline-flex;align-items:center;gap:7px;margin-top:.75rem;font-size:.8rem;font-weight:700;color:var(--verde-principal);text-decoration:none;transition:var(--t)}
+    .cmethod-btn:hover{color:var(--verde-oliva)}
+
+    /* Contact zones */
+    .zones-panel{background:var(--blanco);border-radius:var(--r-md);border:1px solid var(--border-light);overflow:hidden}
+    .zones-panel-head{background:var(--verde-principal);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:11px}
+    .zones-panel-head svg{width:20px;height:20px;color:var(--amarillo)}
+    .zones-panel-head-title{font-size:.95rem;font-weight:800;color:var(--blanco)}
+    .zones-body{padding:1.5rem}
+    .zones-col-title{font-size:.72rem;font-weight:700;color:var(--texto-muted);letter-spacing:.07em;text-transform:uppercase;margin-bottom:.75rem}
+    .zones-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.5rem}
+    .zone-tag{font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:50px;background:rgba(39,75,33,.06);color:var(--verde-principal);border:1px solid rgba(39,75,33,.12)}
+
+    /* ──────── REVEAL ──────── */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* ──────── RESPONSIVE ──────── */
+    @media(max-width:1024px){
+      .srv-grid{grid-template-columns:repeat(2,1fr)}
+      .proc-grid{grid-template-columns:repeat(2,1fr)}
+      .proc-grid::before{display:none}
+      .split{grid-template-columns:1fr;gap:2.5rem}
+      .foot-top{grid-template-columns:1fr 1fr;gap:2rem}
+      .razones-grid{grid-template-columns:repeat(2,1fr)}
+      .principios-grid{grid-template-columns:repeat(2,1fr)}
+      .rev-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:768px){
+      .hero-wrap{grid-template-columns:1fr;gap:2rem}
+      .hero-card{display:none}
+      .nav-links{display:none}
+      .nav-ham{display:flex}
+      .srv-grid{grid-template-columns:1fr}
+      .srv-esp-grid{grid-template-columns:1fr}
+      .srv-esp-card{grid-template-columns:1fr}
+      .srv-esp-img{height:140px}
+      .cov-grid{grid-template-columns:1fr}
+      .rev-grid{grid-template-columns:1fr}
+      .plaga-grid{grid-template-columns:repeat(2,1fr)}
+      .senales-grid{grid-template-columns:repeat(2,1fr)}
+      .contact-grid{grid-template-columns:1fr}
+      .cta-inner{flex-direction:column;align-items:flex-start}
+      .foot-top{grid-template-columns:1fr}
+      .foot-bottom{flex-direction:column;align-items:center;text-align:center}
+      .razones-grid{grid-template-columns:1fr}
+      .principios-grid{grid-template-columns:1fr}
+      .fundador-stats{grid-template-columns:1fr 1fr 1fr}
+    }
+    @media(max-width:480px){
+      .plaga-grid{grid-template-columns:1fr}
+      .senales-grid{grid-template-columns:1fr}
+      .proc-grid{grid-template-columns:1fr}
+      .hero-stats{gap:1.5rem}
+      .fundador-stats{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAVBAR ══════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <a class="nav-logo" onclick="goPage('inicio')" style="cursor:pointer">
+    <!-- Logo SVG del manual de identidad FumiControl+ -->
+    <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Escudo base -->
+      <path d="M60 8 L100 28 L100 68 Q100 95 60 112 Q20 95 20 68 L20 28 Z" fill="#274B21"/>
+      <!-- Cuerpo rata / máscara -->
+      <circle cx="43" cy="38" r="14" fill="#96AC22"/>
+      <circle cx="77" cy="38" r="14" fill="#96AC22"/>
+      <!-- Cabeza -->
+      <ellipse cx="60" cy="55" rx="26" ry="24" fill="#F5F3DE"/>
+      <!-- Máscara gas -->
+      <ellipse cx="60" cy="68" rx="20" ry="14" fill="#274B21"/>
+      <!-- Visor máscara filtros -->
+      <rect x="52" y="72" width="5" height="8" rx="2" fill="#1C3120"/>
+      <rect x="60" y="72" width="5" height="8" rx="2" fill="#1C3120"/>
+      <rect x="68" y="72" width="5" height="8" rx="2" fill="#1C3120"/>
+      <!-- Ojos -->
+      <ellipse cx="50" cy="52" rx="7" ry="5" fill="#274B21"/>
+      <ellipse cx="70" cy="52" rx="7" ry="5" fill="#274B21"/>
+      <ellipse cx="50" cy="52" rx="4" ry="3" fill="#F9BA30"/>
+      <ellipse cx="70" cy="52" rx="4" ry="3" fill="#F9BA30"/>
+      <!-- Orejas internas -->
+      <circle cx="43" cy="38" r="9" fill="#F5F3DE"/>
+      <!-- Punta escudo -->
+      <path d="M60 104 L50 90 L70 90 Z" fill="#96AC22"/>
+    </svg>
+    <span class="nav-logo-wordmark">FumiControl<em>+</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="goPage('inicio');return false" class="active" id="nav-inicio">Inicio</a></li>
+    <li><a href="#" onclick="goPage('servicios');return false" id="nav-servicios">Servicios</a></li>
+    <li><a href="#" onclick="goPage('plagas');return false" id="nav-plagas">Plagas</a></li>
+    <li><a href="#" onclick="goPage('historia');return false" id="nav-historia">Historia</a></li>
+    <li><a href="#" onclick="goPage('contacto');return false" id="nav-contacto">Contacto</a></li>
+    <li><a href="https://wa.me/525513672223?text=Hola%2C%20necesito%20cotizar%20un%20servicio" target="_blank" class="nav-cta">Cotizar ahora</a></li>
+  </ul>
+  <button class="nav-ham" id="ham" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" id="mob-menu">
+  <a href="#" onclick="goPage('inicio');closeMenu();return false">Inicio</a>
+  <a href="#" onclick="goPage('servicios');closeMenu();return false">Servicios</a>
+  <a href="#" onclick="goPage('plagas');closeMenu();return false">Plagas</a>
+  <a href="#" onclick="goPage('historia');closeMenu();return false">Historia</a>
+  <a href="#" onclick="goPage('contacto');closeMenu();return false">Contacto</a>
+  <a href="https://wa.me/525513672223?text=Hola%2C%20necesito%20cotizar%20un%20servicio" target="_blank" class="m-cta">Cotizar por WhatsApp</a>
+</div>
+
+<!-- ══════════════════ PAGE: INICIO ══════════════════ -->
+<div class="page active" id="page-inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="hero-grad"></div>
+    <div class="hero-wrap">
+      <div>
+        <div class="hero-eyebrow"><span class="eyebrow-dot"></span>CDMX &amp; Estado de México · +35 años de experiencia</div>
+        <h1 class="hero-h1">Fumigación Profesional<br>en CDMX con <span class="acc">Resultados<br>Garantizados</span></h1>
+        <p class="hero-sub">Eliminamos plagas de forma segura y efectiva. Técnicos certificados, atención inmediata y agendamos el mismo día. Tu familia y negocio en manos expertas.</p>
+        <div class="hero-btns">
+          <a href="https://wa.me/525513672223?text=Hola%2C%20necesito%20cotizar%20un%20servicio%20de%20fumigaci%C3%B3n" target="_blank" class="btn-yellow">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Cotizar por WhatsApp
+          </a>
+          <a href="tel:5513672223" class="btn-outline-white">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18L5 .2a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            55 1367 2223
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hstat-num">35+</div><div class="hstat-lbl">Años de experiencia</div></div>
+          <div><div class="hstat-num">500+</div><div class="hstat-lbl">Servicios realizados</div></div>
+          <div><div class="hstat-num">100%</div><div class="hstat-lbl">Resultados garantizados</div></div>
+        </div>
+      </div>
+      <!-- Hero card -->
+      <div class="hero-card">
+        <div class="hcard-header">
+          <span class="hcard-header-title">Nuestros Servicios</span>
+          <span class="hcard-header-badge">Atención inmediata</span>
+        </div>
+        <div class="hcard-body">
+          <div class="hcard-service">
+            <div class="hcard-service-icon">🪲</div>
+            <div><div class="hcard-service-name">Fumigación Profesional</div><div class="hcard-service-tag">Cucarachas · Hormigas · Chinches</div></div>
+          </div>
+          <div class="hcard-service">
+            <div class="hcard-service-icon">🐀</div>
+            <div><div class="hcard-service-name">Desratización</div><div class="hcard-service-tag">Ratas · Ratones · Control seguro</div></div>
+          </div>
+          <div class="hcard-service">
+            <div class="hcard-service-icon">🧪</div>
+            <div><div class="hcard-service-name">Sanitización</div><div class="hcard-service-tag">Hogares · Oficinas · Comercios</div></div>
+          </div>
+          <div class="hcard-service">
+            <div class="hcard-service-icon">🛡️</div>
+            <div><div class="hcard-service-name">Control Preventivo</div><div class="hcard-service-tag">Planes periódicos anuales</div></div>
+          </div>
+          <a href="https://wa.me/525513672223?text=Hola%2C%20quiero%20cotizar%20un%20servicio" target="_blank" class="hcard-cta">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Cotizar ahora por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="wrap">
+      <div class="trust-inner">
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Técnicos Certificados</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Agendamos el Mismo Día</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Procesos Seguros y Certificados</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Cobertura CDMX y Estado de México</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NUESTROS SERVICIOS -->
+  <section class="sec sec-white reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Lo que ofrecemos</span>
+        <h2 class="sec-title sec-title-dark">Nuestros Servicios Profesionales</h2>
+        <p class="sec-sub sec-sub-dark">Soluciones integrales para el control de plagas en hogares, oficinas y negocios de toda la CDMX y Estado de México.</p>
+      </div>
+      <div class="srv-grid">
+        <div class="srv-card reveal">
+          <div class="srv-img srv-img-green"><span>🪲</span><span class="srv-badge">Más solicitado</span></div>
+          <div class="srv-body">
+            <div class="srv-title">Fumigación Profesional</div>
+            <p class="srv-desc">Eliminación efectiva de cucarachas, hormigas, chinches, pulgas y otras plagas mediante procesos técnicos certificados y productos autorizados.</p>
+            <a href="#" onclick="goPage('servicios');return false" class="srv-link">Solicitar servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-img srv-img-yellow"><span>🐀</span></div>
+          <div class="srv-body">
+            <div class="srv-title">Desratización</div>
+            <p class="srv-desc">Control estratégico de ratas y ratones con métodos seguros, discretos y de alta efectividad. Protege tu hogar y negocio.</p>
+            <a href="#" onclick="goPage('servicios');return false" class="srv-link">Solicitar servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-img srv-img-olive"><span>🧪</span></div>
+          <div class="srv-body">
+            <div class="srv-title">Sanitización</div>
+            <p class="srv-desc">Desinfección profesional para hogares, oficinas y comercios. Ideal después de infestaciones o como medida preventiva.</p>
+            <a href="#" onclick="goPage('servicios');return false" class="srv-link">Solicitar servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-img srv-img-dark"><span>🛡️</span></div>
+          <div class="srv-body">
+            <div class="srv-title">Control Preventivo</div>
+            <p class="srv-desc">Planes periódicos diseñados para mantener espacios protegidos todo el año y evitar futuras infestaciones desde el origen.</p>
+            <a href="#" onclick="goPage('servicios');return false" class="srv-link">Solicitar plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="sec sec-darkest reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-light">Cómo trabajamos</span>
+        <h2 class="sec-title sec-title-white">Nuestro Proceso Profesional</h2>
+        <p class="sec-sub sec-sub-white">Desde la inspección hasta las recomendaciones finales, cada paso garantiza resultados efectivos y seguros.</p>
+      </div>
+      <div class="proc-grid">
+        <div class="proc-step reveal">
+          <div class="proc-num">1</div>
+          <div class="proc-title">Inspección y diagnóstico</div>
+          <p class="proc-desc">Evaluamos el área afectada, identificamos el tipo de plaga y determinamos los puntos críticos del inmueble.</p>
+        </div>
+        <div class="proc-step reveal">
+          <div class="proc-num">2</div>
+          <div class="proc-title">Plan de acción personalizado</div>
+          <p class="proc-desc">Diseñamos la estrategia más efectiva según el tipo de plaga, el espacio y el nivel de infestación detectado.</p>
+        </div>
+        <div class="proc-step reveal">
+          <div class="proc-num">3</div>
+          <div class="proc-title">Aplicación del tratamiento</div>
+          <p class="proc-desc">Aplicamos productos autorizados con equipo especializado, garantizando seguridad para personas, mascotas y medio ambiente.</p>
+        </div>
+        <div class="proc-step reveal">
+          <div class="proc-num">4</div>
+          <div class="proc-title">Seguimiento y recomendaciones</div>
+          <p class="proc-desc">Brindamos asesoría posterior al servicio y seguimiento cuando el caso lo requiere para mantener los resultados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICACIONES -->
+  <section class="sec sec-white reveal">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <span class="sec-tag tag-green" style="display:inline-block;margin-bottom:1rem">Seguridad garantizada</span>
+          <h2 class="cert-title">Certificaciones y<br>Seguridad Garantizada</h2>
+          <p class="cert-sub">Trabajamos con productos autorizados y aplicados bajo protocolos técnicos seguros. Nuestros técnicos están capacitados para realizar tratamientos efectivos sin poner en riesgo a tu familia, mascotas o empleados.</p>
+          <ul class="cert-pts">
+            <li class="cert-pt">
+              <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div><strong>Productos 100% autorizados</strong><span>Utilizamos únicamente insumos con registro sanitario vigente ante COFEPRIS.</span></div>
+            </li>
+            <li class="cert-pt">
+              <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div><strong>Técnicos certificados y capacitados</strong><span>Personal con formación técnica continua y experiencia real en campo.</span></div>
+            </li>
+            <li class="cert-pt">
+              <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+              <div><strong>Equipamiento especializado</strong><span>Herramientas y equipo de protección profesional en cada intervención.</span></div>
+            </li>
+            <li class="cert-pt">
+              <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+              <div><strong>Seguimiento post-servicio</strong><span>Acompañamiento y asesoría posterior para asegurar la efectividad del tratamiento.</span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="cert-visual">
+          <div class="cert-img-block">🦺</div>
+          <div class="cert-nums">
+            <div class="cert-num-item"><div class="cert-n">35+</div><div class="cert-l">Años activos</div></div>
+            <div class="cert-num-item"><div class="cert-n">500+</div><div class="cert-l">Servicios</div></div>
+            <div class="cert-num-item"><div class="cert-n">100%</div><div class="cert-l">Garantía</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COBERTURA -->
+  <section class="sec sec-crema reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Dónde operamos</span>
+        <h2 class="sec-title sec-title-dark">Cobertura en CDMX y Estado de México</h2>
+        <p class="sec-sub sec-sub-dark">Atendemos las principales alcaldías y municipios del área metropolitana. Confirma disponibilidad en tu zona.</p>
+      </div>
+      <div class="cov-grid">
+        <div class="cov-card cov-card-verde">
+          <div class="cov-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="cov-head-title">Ciudad de México (CDMX)</span></div>
+          <div class="cov-tags">
+            <span class="cov-tag">Álvaro Obregón</span><span class="cov-tag">Azcapotzalco</span><span class="cov-tag">Benito Juárez</span><span class="cov-tag">Coyoacán</span><span class="cov-tag">Cuajimalpa</span><span class="cov-tag">Gustavo A. Madero</span><span class="cov-tag">Iztacalco</span><span class="cov-tag">Iztapalapa</span><span class="cov-tag">Magdalena Contreras</span><span class="cov-tag">Miguel Hidalgo</span><span class="cov-tag">Milpa Alta</span><span class="cov-tag">Tláhuac</span><span class="cov-tag">Tlalpan</span><span class="cov-tag">Venustiano Carranza</span><span class="cov-tag">Xochimilco</span>
+          </div>
+        </div>
+        <div class="cov-card cov-card-yellow">
+          <div class="cov-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="cov-head-title">Estado de México</span></div>
+          <div class="cov-tags">
+            <span class="cov-tag">Naucalpan</span><span class="cov-tag">Tlalnepantla</span><span class="cov-tag">Atizapán de Zaragoza</span><span class="cov-tag">Cuautitlán Izcalli</span><span class="cov-tag">Ecatepec</span><span class="cov-tag">Nezahualcóyotl</span><span class="cov-tag">Huixquilucan</span><span class="cov-tag">Metepec</span><span class="cov-tag">Toluca</span><span class="cov-tag">Tecámac</span><span class="cov-tag">Coacalco</span><span class="cov-tag">Chalco</span><span class="cov-tag">Ixtapaluca</span><span class="cov-tag">Nicolás Romero</span><span class="cov-tag">Zumpango</span><span class="cov-tag">Tultitlán</span>
+          </div>
+        </div>
+      </div>
+      <p class="cov-note">¿No encuentras tu municipio? <a href="https://wa.me/525513672223?text=Hola%2C%20quisiera%20saber%20si%20tienen%20cobertura%20en%20mi%20zona" target="_blank" style="color:var(--verde-principal);font-weight:700;text-decoration:none">Escríbenos y confirmamos disponibilidad →</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec sec-white reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Preguntas frecuentes</span>
+        <h2 class="sec-title sec-title-dark">Resolvemos tus dudas</h2>
+        <p class="sec-sub sec-sub-dark">Las preguntas más comunes sobre nuestros servicios de fumigación y control de plagas.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-txt">¿En cuánto tiempo pueden programar mi servicio?</span><span class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div>
+          <div class="faq-a"><p>En la mayoría de los casos podemos agendar el mismo día o en la fecha más próxima disponible según tu zona y disponibilidad de nuestro equipo técnico.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-txt">¿Es seguro para mascotas y niños?</span><span class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div>
+          <div class="faq-a"><p>Sí. Utilizamos productos aplicados bajo protocolos técnicos seguros y brindamos recomendaciones específicas posteriores al servicio para garantizar la seguridad de todos en el inmueble.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-txt">¿Cuánto dura el tratamiento?</span><span class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div>
+          <div class="faq-a"><p>La duración depende del tipo de plaga y el nivel de infestación. En la inspección inicial explicamos el procedimiento y los tiempos estimados de forma clara y transparente.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-txt">¿Ofrecen garantía en sus servicios?</span><span class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div>
+          <div class="faq-a"><p>Sí. Brindamos seguimiento y asesoría posterior al servicio para asegurar la efectividad del tratamiento. Si el problema persiste, evaluamos el caso y tomamos las medidas necesarias.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-txt">¿Atienden empresas y negocios?</span><span class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div>
+          <div class="faq-a"><p>Sí, atendemos hogares, oficinas, restaurantes, hoteles, bodegas, escuelas e instalaciones industriales. Contamos con planes preventivos para empresas que requieren servicio continuo.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec sec-crema reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Opiniones reales</span>
+        <h2 class="sec-title sec-title-dark">Opiniones de Nuestros Clientes</h2>
+        <p class="sec-sub sec-sub-dark">Lo que dicen las familias y negocios que ya confían en FumiControl+.</p>
+      </div>
+      <div class="rev-grid">
+        <div class="rev-card reveal">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-txt">Agendaron rápido y el servicio fue muy profesional. El técnico explicó todo el proceso y quedamos muy satisfechos. Problema resuelto desde la primera visita.</p>
+          <div class="rev-author"><div class="rev-av">LG</div><div><div class="rev-name">Laura G.</div><div class="rev-loc">Coyoacán, CDMX</div></div></div>
+        </div>
+        <div class="rev-card reveal">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-txt">Muy organizados y cuidadosos con mi hogar. Excelente atención desde el primer contacto. Regresaría sin dudarlo para el siguiente servicio preventivo.</p>
+          <div class="rev-author"><div class="rev-av">CM</div><div><div class="rev-name">Carlos M.</div><div class="rev-loc">Naucalpan, EdoMex</div></div></div>
+        </div>
+        <div class="rev-card reveal">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-txt">Desde la inspección hasta la aplicación todo fue claro y profesional. El técnico fue puntual y dejó el lugar limpio. 100% recomendados para cualquier tipo de plaga.</p>
+          <div class="rev-author"><div class="rev-av">MR</div><div><div class="rev-name">Mariana R.</div><div class="rev-loc">Benito Juárez, CDMX</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-sec">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div>
+          <h2 class="cta-title">¿Necesita Atención Inmediata?</h2>
+          <p class="cta-sub">Contáctenos hoy mismo y agende su servicio con atención profesional y segura. Agendamos el mismo día según disponibilidad.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://wa.me/525513672223?text=Hola%2C%20necesito%20atenci%C3%B3n%20inmediata%20para%20control%20de%20plagas" target="_blank" class="btn-dark">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Cotizar por WhatsApp
+          </a>
+          <a href="tel:5513672223" class="cta-tel">
+            <div class="cta-tel-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18L5 .2a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><div class="cta-tel-lbl">Llámanos directamente</div><div class="cta-tel-num">55 1367 2223</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- END PAGE INICIO -->
+
+<!-- ══════════════════ PAGE: SERVICIOS ══════════════════ -->
+<div class="page" id="page-servicios">
+  <section class="page-hero page-hero-dark">
+    <div class="orb orb-1"></div><div class="orb orb-2"></div>
+    <div class="wrap" style="position:relative;z-index:5">
+      <div class="page-hero-tag">Nuestros Servicios</div>
+      <h1 class="page-hero-h1">Fumigaciones, Control de Plagas<br>y Sanitización en CDMX y EdoMex</h1>
+      <p class="page-hero-sub">Ofrecemos servicio profesional de fumigación, control de plagas y sanitización para casas, departamentos, oficinas, restaurantes e industrias.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="https://wa.me/525513672223?text=Hola%2C%20quiero%20cotizar%20un%20servicio" target="_blank" class="btn-yellow">Cotizar por WhatsApp</a>
+        <a href="tel:5513672223" class="btn-outline-white">Llamar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios específicos -->
+  <section class="sec sec-white reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Servicios específicos</span>
+        <h2 class="sec-title sec-title-dark">Soluciones por Tipo de Plaga</h2>
+        <p class="sec-sub sec-sub-dark">Resultados más rápidos y duraderos con tratamientos especializados para cada caso.</p>
+      </div>
+      <div class="srv-esp-grid">
+        <div class="srv-esp-card reveal">
+          <div class="srv-esp-img srv-esp-img-green"><span style="font-size:3.5rem">🪲</span></div>
+          <div class="srv-esp-body">
+            <div class="srv-esp-title">Fumigaciones Profesionales</div>
+            <p class="srv-esp-desc">Eliminación efectiva de cucarachas, hormigas, chinches, pulgas y otros insectos mediante procesos técnicos certificados y productos autorizados.</p>
+            <ul class="srv-esp-list">
+              <li>Cucarachas, hormigas, chinches</li>
+              <li>Mosquitos, moscas, termitas</li>
+              <li>Casas, departamentos, oficinas, restaurantes</li>
+              <li>Bodegas, hoteles, comedores industriales</li>
+            </ul>
+            <a href="https://wa.me/525513672223?text=Hola%2C%20quiero%20solicitar%20fumigaci%C3%B3n%20profesional" target="_blank" class="btn-yellow" style="font-size:.82rem;padding:11px 20px">Solicitar fumigación</a>
+          </div>
+        </div>
+        <div class="srv-esp-card reveal">
+          <div class="srv-esp-img srv-esp-img-olive"><span style="font-size:3.5rem">🐀</span></div>
+          <div class="srv-esp-body">
+            <div class="srv-esp-title">Control de Ratas y Ratones</div>
+            <p class="srv-esp-desc">Abatimos colonias de roedores mediante trampas, cebos y control estructural. Protegemos instalaciones eléctricas, tuberías y estructuras de la madera.</p>
+            <ul class="srv-esp-list">
+              <li>Control estratégico con métodos seguros y discretos</li>
+              <li>Sellado de accesos y puntos de entrada</li>
+              <li>Servicio residencial y comercial</li>
+              <li>Control preventivo para evitar reinfestación</li>
+            </ul>
+            <a href="https://wa.me/525513672223?text=Hola%2C%20quiero%20control%20de%20roedores" target="_blank" class="btn-yellow" style="font-size:.82rem;padding:11px 20px">Solicitar servicio</a>
+          </div>
+        </div>
+        <div class="srv-esp-card reveal">
+          <div class="srv-esp-img srv-esp-img-yellow"><span style="font-size:3.5rem">🧪</span></div>
+          <div class="srv-esp-body">
+            <div class="srv-esp-title">Sanitización y Desinfección</div>
+            <p class="srv-esp-desc">Servicio profesional para eliminar virus, bacterias, hongos y microorganismos. Ideal para hogares, restaurantes, hoteles y espacios de trabajo.</p>
+            <ul class="srv-esp-list">
+              <li>Ideal para hogares, apartamentos y oficinas</li>
+              <li>Restaurantes, hoteles y locales comerciales</li>
+              <li>Aplicaciones periódicas y a demanda</li>
+              <li>Cumplimiento de estándares sanitarios</li>
+            </ul>
+            <a href="https://wa.me/525513672223?text=Hola%2C%20quiero%20sanitizaci%C3%B3n%20profesional" target="_blank" class="btn-yellow" style="font-size:.82rem;padding:11px 20px">Solicitar sanitización</a>
+          </div>
+        </div>
+        <div class="srv-esp-card reveal">
+          <div class="srv-esp-img srv-esp-img-dark"><span style="font-size:3.5rem">🛡️</span></div>
+          <div class="srv-esp-body">
+            <div class="srv-esp-title">Fumigación para Empresas e Industrias</div>
+            <p class="srv-esp-desc">Programas preventivos de control de plagas para empresas con servicio continuo. Inspecciones programadas, aplicaciones periódicas y seguimiento especializado.</p>
+            <ul class="srv-esp-list">
+              <li>Inspecciones programadas y sistemáticas</li>
+              <li>Aplicaciones periódicas adaptadas al giro</li>
+              <li>Seguimiento del servicio y reportes</li>
+              <li>Recomendaciones preventivas continuas</li>
+            </ul>
+            <a href="https://wa.me/525513672223?text=Hola%2C%20quiero%20un%20programa%20preventivo%20para%20mi%20empresa" target="_blank" class="btn-yellow" style="font-size:.82rem;padding:11px 20px">Solicitar programa preventivo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Control de Plagas proceso -->
+  <section class="sec sec-darkest reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-light">Cómo funciona</span>
+        <h2 class="sec-title sec-title-white">Control de Plagas Urbanas</h2>
+        <p class="sec-sub sec-sub-white">El control de plagas no solo elimina la infestación actual, sino que ayuda a prevenir su reaparición desde el origen.</p>
+      </div>
+      <div class="proc-grid">
+        <div class="proc-step reveal"><div class="proc-num">1</div><div class="proc-title">Inspección del área afectada</div><p class="proc-desc">Inspeccionamos el espacio para detectar los puntos críticos y condiciones del lugar que favorecen la plaga.</p></div>
+        <div class="proc-step reveal"><div class="proc-num">2</div><div class="proc-title">Identificación del tipo de plaga</div><p class="proc-desc">Identificamos la plaga para seleccionar el tratamiento más efectivo, adecuado y económico para el caso.</p></div>
+        <div class="proc-step reveal"><div class="proc-num">3</div><div class="proc-title">Diagnóstico del nivel de infestación</div><p class="proc-desc">Determinamos el nivel de infestación para elegir la estrategia de control más eficiente.</p></div>
+        <div class="proc-step reveal"><div class="proc-num">4</div><div class="proc-title">Aplicación + recomendaciones</div><p class="proc-desc">Aplicamos el tratamiento adecuado y brindamos recomendaciones preventivas para evitar recurrencias.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué elegirnos -->
+  <section class="sec sec-crema reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Ventajas</span>
+        <h2 class="sec-title sec-title-dark">¿Por Qué Elegir FumiControl+?</h2>
+        <p class="sec-sub sec-sub-dark">Nos enfocamos en brindar soluciones efectivas adaptadas a cada tipo de plaga y cada situación.</p>
+      </div>
+      <div class="razones-grid">
+        <div class="razon-card reveal"><div class="razon-icon">⚡</div><div class="razon-title">Atención Inmediata</div><p class="razon-desc">Según disponibilidad, programamos el servicio el mismo día o lo antes posible.</p></div>
+        <div class="razon-card reveal"><div class="razon-icon">👨‍🔬</div><div class="razon-title">Técnicos Capacitados</div><p class="razon-desc">Personal entrenado para aplicar tratamientos seguros, eficientes y duraderos.</p></div>
+        <div class="razon-card reveal"><div class="razon-icon">🧰</div><div class="razon-title">Equipo Profesional</div><p class="razon-desc">Herramientas adecuadas para cada tipo de plaga y nivel de tratamiento requerido.</p></div>
+        <div class="razon-card reveal"><div class="razon-icon">✅</div><div class="razon-title">Productos Autorizados</div><p class="razon-desc">Aplicación responsable con enfoque en seguridad, salud y resultados garantizados.</p></div>
+        <div class="razon-card reveal"><div class="razon-icon">🔒</div><div class="razon-title">Procedimientos Seguros</div><p class="razon-desc">Aplicación controlada y recomendaciones posteriores para tu tranquilidad.</p></div>
+        <div class="razon-card reveal"><div class="razon-icon">📋</div><div class="razon-title">Seguimiento Posterior</div><p class="razon-desc">Acompañamiento cuando el caso lo requiere para mantener el espacio libre de plagas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA servicios -->
+  <section class="cta-sec">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div>
+          <h2 class="cta-title">¿Necesita Fumigación o Sanitización Urgente?</h2>
+          <p class="cta-sub">Contáctenos hoy mismo y agende su servicio con atención profesional y segura. Agendamos el mismo día según disponibilidad.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://wa.me/525513672223?text=Hola%2C%20necesito%20fumigaci%C3%B3n%20urgente" target="_blank" class="btn-dark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Agendar Servicio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════ PAGE: PLAGAS ══════════════════ -->
+<div class="page" id="page-plagas">
+  <section class="page-hero page-hero-dark">
+    <div class="orb orb-1"></div><div class="orb orb-2"></div>
+    <div class="wrap" style="position:relative;z-index:5">
+      <div class="page-hero-tag">Control Profesional · CDMX y Estado de México</div>
+      <h1 class="page-hero-h1">Plagas Urbanas que<br>Controlamos</h1>
+      <p class="page-hero-sub">Protegemos hogares y negocios contra las plagas más comunes en zonas urbanas mediante tratamientos profesionales, seguros, efectivos y autorizados.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="https://wa.me/525513672223?text=Hola%2C%20quiero%20solicitar%20una%20inspecci%C3%B3n" target="_blank" class="btn-yellow">Solicitar inspección</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plagas principales -->
+  <section class="sec sec-white reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Principales plagas</span>
+        <h2 class="sec-title sec-title-dark">Principales Plagas que Atendemos</h2>
+        <p class="sec-sub sec-sub-dark">Tratamientos profesionales enfocados en eliminar el problema desde su origen y reducir el riesgo de reinfestación.</p>
+      </div>
+      <div class="plaga-grid">
+        <div class="plaga-card reveal"><div class="plaga-img plaga-img-1"><span>🪲</span></div><div class="plaga-body"><div class="plaga-name">Cucarachas</div><p class="plaga-desc">Se desarrollan en lugares húmedos, cocinas, drenajes y bodegas. Pueden contaminar alimentos y superficies. Aplicamos tratamientos especializados para eliminar la infestación y prevenir su reproducción.</p><span class="plaga-tag">Alta demanda</span></div></div>
+        <div class="plaga-card reveal"><div class="plaga-img plaga-img-2"><span>🐀</span></div><div class="plaga-body"><div class="plaga-name">Roedores (Ratas y Ratones)</div><p class="plaga-desc">Representan riesgo por transmisión de enfermedades y daño a instalaciones eléctricas. También causan daños en tuberías de agua, instalaciones eléctricas y estructuras de madera.</p><span class="plaga-tag">Control estratégico</span></div></div>
+        <div class="plaga-card reveal"><div class="plaga-img plaga-img-3"><span>🐜</span></div><div class="plaga-body"><div class="plaga-name">Hormigas</div><p class="plaga-desc">Pueden formar colonias extensas e invadir en busca de alimento. Tratamos el sistema desde su origen para eliminar la colonia completa y previtar reinvasiones futuras.</p><span class="plaga-tag">Control de colonia</span></div></div>
+        <div class="plaga-card reveal"><div class="plaga-img plaga-img-4"><span>🦟</span></div><div class="plaga-body"><div class="plaga-name">Mosquitos</div><p class="plaga-desc">Frecuentes donde hay acumulación de agua. Además de molestos, pueden ser transmisores de enfermedades. Aplicamos tratamientos larvicidas y adulticidas para controlar su reproducción.</p><span class="plaga-tag">Larvicida + adulticida</span></div></div>
+        <div class="plaga-card reveal"><div class="plaga-img plaga-img-5"><span>🪰</span></div><div class="plaga-body"><div class="plaga-name">Moscas</div><p class="plaga-desc">Aparecen donde hay residuos orgánicos o alimentos expuestos. Transportan gérmenes y contaminan superficies. Controlamos focos de reproducción y aplicamos soluciones efectivas.</p><span class="plaga-tag">Control de focos</span></div></div>
+        <div class="plaga-card reveal"><div class="plaga-img plaga-img-6"><span>🕷️</span></div><div class="plaga-body"><div class="plaga-name">Pulgas y Garrapatas</div><p class="plaga-desc">Afectan a personas y mascotas causando picaduras e irritación. Aplicamos tratamientos especializados en todas las etapas de desarrollo para una eliminación completa y duradera.</p><span class="plaga-tag">Ciclo completo</span></div></div>
+        <div class="plaga-card reveal"><div class="plaga-img plaga-img-7"><span>🛏️</span></div><div class="plaga-body"><div class="plaga-name">Chinches de Cama</div><p class="plaga-desc">Se esconden en colchones, muebles y grietas, alimentándose principalmente de noche. Aplicamos protocolos específicos para tratar la infestación y eliminarlas en todas sus etapas.</p><span class="plaga-tag">Protocolo especializado</span></div></div>
+        <div class="plaga-card reveal"><div class="plaga-img plaga-img-8"><span>🪵</span></div><div class="plaga-body"><div class="plaga-name">Termitas</div><p class="plaga-desc">Pueden causar daños estructurales graves a madera, instalaciones y techos. Mientras pasan desapercibidas destruyen columnas y vigas. Controlamos colonias enteras antes de que el daño sea mayor.</p><span class="plaga-tag">Daño estructural</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Señales -->
+  <section class="sec sec-crema reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Señales de alerta</span>
+        <h2 class="sec-title sec-title-dark">Señales Comunes de Infestación</h2>
+        <p class="sec-sub sec-sub-dark">Detectar una plaga a tiempo puede evitar daños mayores y tratamientos más complejos. Si notas alguna de estas señales, conviene solicitar una inspección.</p>
+      </div>
+      <div class="senales-grid">
+        <div class="senal-card reveal"><div class="senal-icon">💩</div><div class="senal-title">Excrementos, rastros o manchas</div><p class="senal-desc">Indicadores frecuentes de roedores o insectos en cocinas, bodegas y áreas de almacenamiento.</p></div>
+        <div class="senal-card reveal"><div class="senal-icon">🪵</div><div class="senal-title">Daños en cables, empaques o madera</div><p class="senal-desc">Los roedores pueden roer cables eléctricos y tuberías, y las termitas destruyen estructuras de madera.</p></div>
+        <div class="senal-card reveal"><div class="senal-icon">👁️</div><div class="senal-title">Insectos visibles con frecuencia</div><p class="senal-desc">Ver cucarachas o ratones de forma constante indica una infestación activa que requiere atención.</p></div>
+        <div class="senal-card reveal"><div class="senal-icon">🔴</div><div class="senal-title">Picaduras e irritación</div><p class="senal-desc">Pueden indicar pulgas, garrapatas o chinches de cama, especialmente si aparecen de manera constante.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Espacios -->
+  <section class="sec sec-white reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Dónde operamos</span>
+        <h2 class="sec-title sec-title-dark">Protegemos Todo Tipo de Espacios</h2>
+        <p class="sec-sub sec-sub-dark">Nuestro servicio está diseñado para ofrecer soluciones seguras y efectivas en diferentes tipos de instalaciones residenciales y comerciales.</p>
+      </div>
+      <div class="espacios-pills">
+        <div class="espacio-pill">🏠 Casas habitación</div>
+        <div class="espacio-pill">🏢 Oficinas</div>
+        <div class="espacio-pill">🍽️ Restaurantes</div>
+        <div class="espacio-pill">🏬 Comercios</div>
+        <div class="espacio-pill">🏨 Hoteles</div>
+        <div class="espacio-pill">🚐 Panaderías</div>
+        <div class="espacio-pill">🏭 Instalaciones Industriales</div>
+        <div class="espacio-pill">🏫 Escuelas</div>
+        <div class="espacio-pill">🏥 Clínicas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Plagas -->
+  <section class="sec sec-crema reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Dudas frecuentes</span>
+        <h2 class="sec-title sec-title-dark">Preguntas Frecuentes sobre Plagas</h2>
+        <p class="sec-sub sec-sub-dark">Resolvemos dudas comunes sobre fumigación y control de plagas para que tomes una decisión informada.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-txt">¿Cada cuánto tiempo se recomienda fumigar?</span><span class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div><div class="faq-a"><p>En hogares comunes recomendamos revisiones preventivas cada 3 a 6 meses, dependiendo del entorno y tipo de plaga. Para negocios de alimentos, puede ser mensual.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-txt">¿La fumigación es segura para personas y mascotas?</span><span class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div><div class="faq-a"><p>Con los productos adecuados y siguiendo las recomendaciones de nuestro técnico, el servicio es seguro. Indicamos los tiempos de espera necesarios antes de reingresar al espacio.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-txt">¿Cuánto dura un servicio de fumigación?</span><span class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div><div class="faq-a"><p>Depende del tamaño del lugar y el tratamiento. Para una casa habitación puede durar entre 30 minutos y 2 horas. El técnico te informará en la inspección inicial.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-txt">¿Atienden hogares y negocios?</span><span class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div><div class="faq-a"><p>Sí. Atendemos casas, oficinas, restaurantes, comercios, hoteles, escuelas e instalaciones industriales en la zona metropolitana.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Plagas -->
+  <section class="cta-sec">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div>
+          <h2 class="cta-title">¿Detectaste Señales de Plagas?</h2>
+          <p class="cta-sub">Actuar a tiempo puede evitar daños mayores. Nuestro equipo puede realizar una inspección profesional para identificar el problema y aplicar el tratamiento adecuado.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://wa.me/525513672223?text=Hola%2C%20quiero%20solicitar%20una%20inspecci%C3%B3n" target="_blank" class="btn-dark">Solicitar inspección</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════ PAGE: HISTORIA ══════════════════ -->
+<div class="page" id="page-historia">
+  <section class="page-hero page-hero-dark">
+    <div class="orb orb-1"></div><div class="orb orb-2"></div>
+    <div class="wrap" style="position:relative;z-index:5">
+      <div class="page-hero-tag">Empresa familiar · CDMX y Estado de México</div>
+      <h1 class="page-hero-h1">Más de 35 Años de Experiencia<br>en Control Profesional de Plagas</h1>
+      <p class="page-hero-sub">FumiControl+ nace del trabajo en campo y la experiencia técnica del Ing. José Luis Palacios Pong. Hoy combinamos ese legado con procesos modernos, enfoque preventivo y una cultura de servicio seria y responsable.</p>
+      <a href="https://wa.me/525513672223" target="_blank" class="btn-yellow">Cotizar por WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Nuestra Historia -->
+  <section class="sec sec-white reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Trayectoria</span>
+        <h2 class="sec-title sec-title-dark">Nuestra Historia</h2>
+        <p class="sec-sub sec-sub-dark">Una trayectoria construida con cariño, experiencia real y evolución hacia un servicio más accesible y profesional.</p>
+      </div>
+      <div class="historia-timeline">
+        <div class="timeline-item reveal">
+          <div class="tl-dot">01</div>
+          <div class="tl-content">
+            <div class="tl-stage">Inicio en el oficio</div>
+            <div class="tl-title">Experiencia en campo</div>
+            <p class="tl-desc">La experiencia del Ing. José Luis Palacios Pong se forma durante años de trabajo directo, atendiendo casos reales en hogares, comercios e industrias de la zona metropolitana.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-dot">02</div>
+          <div class="tl-content">
+            <div class="tl-stage">Consolidación del servicio</div>
+            <div class="tl-title">Base técnica sólida</div>
+            <p class="tl-desc">Con el paso del tiempo, la asistencia acumulada se convirtió en base técnica para atender plagas de nuestros distintos, molestos y nocivos con mayor efectividad y precisión.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-dot">03</div>
+          <div class="tl-content">
+            <div class="tl-stage">Evolución y profesionalización</div>
+            <div class="tl-title">Diagnóstico · Aplicación responsable · Prevención</div>
+            <p class="tl-desc">La nueva generación incorporó una operación más estructurada: diagnóstico, aplicación responsable, recomendaciones post-servicio y enfoque preventivo como pilares del servicio.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-dot">04</div>
+          <div class="tl-content">
+            <div class="tl-stage">FumiControl+ hoy</div>
+            <div class="tl-title">Empresa familiar · Profesional y responsable</div>
+            <p class="tl-desc">Una empresa que combina legado, técnica y presencia digital moderna para atender con calidad y confianza en CDMX y Estado de México. Servicios residenciales, comerciales e industriales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fundador -->
+  <section class="sec sec-darkest reveal">
+    <div class="wrap">
+      <div class="split">
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);overflow:hidden">
+          <div style="height:280px;background:linear-gradient(135deg,#1c3120,#274b21);display:flex;align-items:center;justify-content:center;font-size:5rem">👨‍🔬</div>
+          <div style="padding:1.5rem">
+            <div style="font-size:.7rem;font-weight:700;color:var(--amarillo);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.3rem">Fundador y director técnico</div>
+            <div style="font-size:1.05rem;font-weight:800;color:var(--blanco);margin-bottom:.4rem">Ing. José Luis Palacios Pong</div>
+            <p style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.65">Más de 35 años de experiencia real en campo. Su legado técnico es el fundamento de cada servicio que ofrece FumiControl+.</p>
+            <div class="fundador-stats">
+              <div class="fstat"><div class="fstat-n">35+</div><div class="fstat-l">Años exp.</div></div>
+              <div class="fstat"><div class="fstat-n">500+</div><div class="fstat-l">Servicios</div></div>
+              <div class="fstat"><div class="fstat-n">100%</div><div class="fstat-l">Garantía</div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="sec-tag tag-light" style="display:inline-block;margin-bottom:1.2rem">Nuestra filosofía</span>
+          <h2 style="font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:900;color:var(--blanco);letter-spacing:-.03em;line-height:1.12;margin-bottom:1rem">Legado técnico,<br>visión moderna</h2>
+          <p style="font-size:.9rem;color:rgba(255,255,255,.62);line-height:1.75;margin-bottom:2rem">En FumiControl+ creemos que un buen servicio no se trata solo de "aplicar producto". Se trata de entender el problema, atenderlo con responsabilidad y dejar recomendaciones útiles para proteger el espacio.</p>
+          <p style="font-size:.9rem;color:rgba(255,255,255,.62);line-height:1.75;margin-bottom:2rem">Somos una empresa familiar en proceso de posicionamiento digital, pero con una base que nos distingue: experiencia real, cariño por lo que hacemos y compromiso con el equipo bien hecho.</p>
+          <a href="https://wa.me/525513672223" target="_blank" class="btn-yellow">Empresa familiar · Profesional y responsable</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principios -->
+  <section class="sec sec-dark reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-light">Lo que nos guía</span>
+        <h2 class="sec-title sec-title-white">Nuestros Principios</h2>
+        <p class="sec-sub sec-sub-white">Lo que nos guía con el tiempo: seguridad, calidad y servicio profesional. Esto es lo que puedes esperar cuando nos contratas.</p>
+      </div>
+      <div class="principios-grid">
+        <div class="principio-card reveal"><div class="principio-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="principio-title">Diagnosticamos antes de actuar</div><p class="principio-desc">Inspeccionamos y entendemos el origen del problema antes de aplicar cualquier tratamiento.</p></div>
+        <div class="principio-card reveal"><div class="principio-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="principio-title">Aplicación responsable</div><p class="principio-desc">Tratamientos seguros con productos autorizados, recomendaciones claras y cero riesgos innecesarios.</p></div>
+        <div class="principio-card reveal"><div class="principio-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="principio-title">Enfoque preventivo</div><p class="principio-desc">Atacamos el riesgo de reinfestación, no solo el síntoma visible. Prevenimos futuras infestaciones.</p></div>
+        <div class="principio-card reveal"><div class="principio-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="principio-title">Comunicación clara</div><p class="principio-desc">Te decimos qué tienes, qué se va a aplicar y cómo evitar recurrencias. Sin tecnicismos innecesarios.</p></div>
+        <div class="principio-card reveal"><div class="principio-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="principio-title">Servicio humano</div><p class="principio-desc">Empresa familiar con seguimiento cuando el caso lo requiere. Tratamos cada servicio con dedicación real.</p></div>
+        <div class="principio-card reveal"><div class="principio-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="principio-title">Compromiso con calidad</div><p class="principio-desc">Hacemos el trabajo bien hecho desde el inicio, con enfoque en resultados, no solo en visitas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section class="sec sec-white reveal">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <span class="sec-tag tag-green" style="display:inline-block;margin-bottom:1rem">Misión</span>
+          <h3 style="font-size:1.4rem;font-weight:900;color:var(--texto-dark);letter-spacing:-.02em;margin-bottom:1rem">Nuestra Misión</h3>
+          <p style="font-size:.9rem;color:var(--texto-muted);line-height:1.75">Proporcionar soluciones integrales y sostenibles para el control de plagas, utilizando tecnología de vanguardia y métodos innovadores que garanticen la seguridad y bienestar de nuestros clientes y el medio ambiente. Nos comprometemos a ofrecer un servicio de alta calidad, eficiente y respetuoso con la naturaleza.</p>
+        </div>
+        <div>
+          <span class="sec-tag tag-green" style="display:inline-block;margin-bottom:1rem">Visión</span>
+          <h3 style="font-size:1.4rem;font-weight:900;color:var(--texto-dark);letter-spacing:-.02em;margin-bottom:1rem">Nuestra Visión</h3>
+          <p style="font-size:.9rem;color:var(--texto-muted);line-height:1.75">Ser líderes en la industria de control de plagas, reconocidos por nuestra capacidad de innovación y excelencia en el servicio. Aspiramos a transformar la manera en que se gestionan las plagas, estableciendo nuevos estándares en eficiencia y sostenibilidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Historia -->
+  <section class="cta-sec">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div>
+          <h2 class="cta-title">¿Quiere Atención Profesional y Segura?</h2>
+          <p class="cta-sub">Escríbenos por WhatsApp y agendamos su servicio según disponibilidad en CDMX y Estado de México.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://wa.me/525513672223" target="_blank" class="btn-dark">Cotizar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════ PAGE: CONTACTO ══════════════════ -->
+<div class="page" id="page-contacto">
+  <section class="page-hero page-hero-dark">
+    <div class="orb orb-1"></div><div class="orb orb-2"></div>
+    <div class="wrap" style="position:relative;z-index:5">
+      <div class="page-hero-tag">Atención profesional</div>
+      <h1 class="page-hero-h1">Contáctanos y Recibe<br>Atención Profesional</h1>
+      <p class="page-hero-sub">Si detectaste señales de plagas o necesitas una inspección profesional, nuestro equipo puede ayudarte. Respuesta rápida garantizada.</p>
+      <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+        <span style="background:rgba(255,255,255,.12);color:var(--blanco);font-size:.8rem;font-weight:600;padding:6px 16px;border-radius:50px;border:1px solid rgba(255,255,255,.18)">⚡ Respuesta rápida</span>
+        <span style="background:rgba(255,255,255,.12);color:var(--blanco);font-size:.8rem;font-weight:600;padding:6px 16px;border-radius:50px;border:1px solid rgba(255,255,255,.18)">✓ Técnicos certificados</span>
+        <span style="background:rgba(255,255,255,.12);color:var(--blanco);font-size:.8rem;font-weight:600;padding:6px 16px;border-radius:50px;border:1px solid rgba(255,255,255,.18)">📍 Cobertura CDMX y EdoMex</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formas de contacto -->
+  <section class="sec sec-white reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag tag-green">Cómo contactarnos</span>
+        <h2 class="sec-title sec-title-dark">Formas de Contactarnos</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-method">
+          <div class="cmethod-card reveal">
+            <div class="cmethod-icon cmethod-icon-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
+            <div>
+              <div class="cmethod-label">WhatsApp</div>
+              <div class="cmethod-value">55 1367 2223</div>
+              <p class="cmethod-desc">Escríbenos al número y te damos respuesta rápida. Agendamos el mismo día según disponibilidad.</p>
+              <a href="https://wa.me/525513672223?text=Hola%2C%20necesito%20cotizar%20un%20servicio%20de%20fumigaci%C3%B3n" target="_blank" class="btn-yellow" style="margin-top:.75rem;font-size:.82rem;padding:11px 20px">Enviar mensaje</a>
+            </div>
+          </div>
+          <div class="cmethod-card reveal">
+            <div class="cmethod-icon cmethod-icon-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18L5 .2a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div>
+              <div class="cmethod-label">Llamar</div>
+              <div class="cmethod-value">55 1367 2223</div>
+              <p class="cmethod-desc">Llámanos directamente y te atendemos de inmediato para agendar tu servicio.</p>
+              <a href="tel:5513672223" class="btn-outline-dark" style="margin-top:.75rem;font-size:.82rem;padding:10px 20px">Llamar ahora</a>
+            </div>
+          </div>
+          <div class="cmethod-card reveal">
+            <div class="cmethod-icon cmethod-icon-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div>
+              <div class="cmethod-label">Correo electrónico</div>
+              <div class="cmethod-value" style="font-size:.9rem">contacto@fumicontrolplus.com</div>
+              <p class="cmethod-desc">Envíanos un correo con tu consulta o para solicitar información sobre nuestros planes.</p>
+              <a href="mailto:contacto@fumicontrolplus.com" class="cmethod-btn">Enviar correo →</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="zones-panel reveal">
+            <div class="zones-panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="zones-panel-head-title">Cobertura en CDMX y Estado de México</span></div>
+            <div class="zones-body">
+              <div class="zones-col-title">Ciudad de México</div>
+              <div class="zones-tags">
+                <span class="zone-tag">Álvaro Obregón</span><span class="zone-tag">Azcapotzalco</span><span class="zone-tag">Benito Juárez</span><span class="zone-tag">Coyoacán</span><span class="zone-tag">Cuajimalpa</span><span class="zone-tag">Gustavo A. Madero</span><span class="zone-tag">Iztacalco</span><span class="zone-tag">Iztapalapa</span><span class="zone-tag">Magdalena Contreras</span><span class="zone-tag">Miguel Hidalgo</span><span class="zone-tag">Milpa Alta</span><span class="zone-tag">Tláhuac</span><span class="zone-tag">Tlalpan</span><span class="zone-tag">Venustiano Carranza</span><span class="zone-tag">Xochimilco</span>
+              </div>
+              <div class="zones-col-title">Estado de México</div>
+              <div class="zones-tags">
+                <span class="zone-tag">Naucalpan</span><span class="zone-tag">Tlalnepantla</span><span class="zone-tag">Atizapán</span><span class="zone-tag">Cuautitlán Izcalli</span><span class="zone-tag">Ecatepec</span><span class="zone-tag">Nezahualcóyotl</span><span class="zone-tag">Huixquilucan</span><span class="zone-tag">Metepec</span><span class="zone-tag">Toluca</span><span class="zone-tag">Tecámac</span><span class="zone-tag">Coacalco</span><span class="zone-tag">Chalco</span><span class="zone-tag">Ixtapaluca</span><span class="zone-tag">Nicolás Romero</span><span class="zone-tag">Zumpango</span><span class="zone-tag">Tultitlán</span>
+              </div>
+              <p style="font-size:.8rem;color:var(--texto-muted);margin-top:.5rem">Atendemos zonas cercanas bajo disponibilidad. ¿No está tu zona? Pregúntanos por WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Contacto -->
+  <section class="cta-sec">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div>
+          <h2 class="cta-title">¿Necesitas Fumigación Urgente?</h2>
+          <p class="cta-sub">Contáctanos ahora y agendamos tu servicio de forma profesional. Atendemos el mismo día según disponibilidad.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://wa.me/525513672223?text=Hola%2C%20necesito%20fumigaci%C3%B3n%20urgente" target="_blank" class="btn-dark">Cotizar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════ FOOTER (global) ══════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">FumiControl<em>+</em></div>
+        <p class="foot-desc">Fumigaciones, control de plagas y sanitización en CDMX y Estado de México. Empresa familiar con más de 35 años de experiencia.</p>
+        <div class="foot-contact"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>55 1367 2223</div>
+        <div class="foot-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:contacto@fumicontrolplus.com">contacto@fumicontrolplus.com</a></div>
+      </div>
+      <div>
+        <div class="foot-col-title">Navegación</div>
+        <ul class="foot-links">
+          <li><a href="#" onclick="goPage('inicio');return false">Inicio</a></li>
+          <li><a href="#" onclick="goPage('servicios');return false">Servicios</a></li>
+          <li><a href="#" onclick="goPage('plagas');return false">Plagas</a></li>
+          <li><a href="#" onclick="goPage('historia');return false">Historia</a></li>
+          <li><a href="#" onclick="goPage('contacto');return false">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-col-title">Servicios</div>
+        <ul class="foot-links">
+          <li><a href="#" onclick="goPage('servicios');return false">Fumigaciones</a></li>
+          <li><a href="#" onclick="goPage('servicios');return false">Control de Plagas</a></li>
+          <li><a href="#" onclick="goPage('servicios');return false">Sanitización</a></li>
+          <li><a href="#" onclick="goPage('servicios');return false">Control de Roedores</a></li>
+          <li><a href="#" onclick="goPage('servicios');return false">Control Preventivo</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-cta-card">
+          <div class="foot-cta-title">Atención Inmediata</div>
+          <p class="foot-cta-desc">Agendamos el mismo día según disponibilidad. Escríbenos y te damos respuesta rápida.</p>
+          <a href="https://wa.me/525513672223?text=Hola%2C%20necesito%20cotizar%20un%20servicio" target="_blank" class="foot-cta-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Cotizar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-copy">© 2026 FumiControl+ · Todos los derechos reservados</div>
+      <div class="foot-legal"><a href="#">Aviso de privacidad</a><a href="#">Términos de uso</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOTANTE -->
+<div class="wa-wrap">
+  <div class="wa-tip">¡Escríbenos ahora!</div>
+  <a href="https://wa.me/525513672223?text=Hola%2C%20me%20interesa%20cotizar%20un%20servicio%20de%20fumigaci%C3%B3n" target="_blank" class="wa-btn" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+</div>
+
+<script>
+  // ── PAGE NAVIGATION ──
+  const pages = ['inicio','servicios','plagas','historia','contacto'];
+  function goPage(id) {
+    pages.forEach(p => {
+      document.getElementById('page-'+p).classList.remove('active');
+      const navEl = document.getElementById('nav-'+p);
+      if(navEl) navEl.classList.remove('active');
+    });
+    document.getElementById('page-'+id).classList.add('active');
+    const navEl = document.getElementById('nav-'+id);
+    if(navEl) navEl.classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+    // re-trigger reveals
+    setTimeout(initReveal, 100);
+  }
+
+  // ── NAVBAR SCROLL ──
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('solid',window.scrollY>60),{passive:true});
+
+  // ── MOBILE MENU ──
+  function toggleMenu(){
+    document.getElementById('ham').classList.toggle('open');
+    document.getElementById('mob-menu').classList.toggle('open');
+  }
+  function closeMenu(){
+    document.getElementById('ham').classList.remove('open');
+    document.getElementById('mob-menu').classList.remove('open');
+  }
+
+  // ── FAQ ──
+  function toggleFaq(el){
+    const item=el.closest('.faq-item');
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+  }
+
+  // ── SCROLL REVEAL ──
+  function initReveal(){
+    const obs=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+      });
+    },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>{
+      el.classList.remove('visible');
+      obs.observe(el);
+    });
+  }
+  initReveal();
+</script>
+</body>
+</html>
